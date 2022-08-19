@@ -34,23 +34,14 @@ function clearEarn() {
     return (clientPrice - SumPrice)
 }
 
-// let price = 260 / 2;
-// let sale = 260 / 10;
-// function earn() {
-//     return (price - sale).toFixed()
-// }
-
-
 console.log(Math.max(dogPrice, catPrice, birdPrice)); //максимальне число
 console.log(Math.min(dogPrice, catPrice, birdPrice)); //мінімальне число
 console.log(petsSumPrice); //вартість всіх товарів
 console.log(petsCoinslessPrice); //вартість всіх товарів без копійок, округлена в меньшу сторону
-console.log(Math.ceil(petsSumPrice / 100) * 100); //сумa товарів округленa до сотень
+console.log(Math.round(petsSumPrice / 100) * 100); //сумa товарів округленa до сотень
 console.log(even_or_odd()); //парне чи непарне
 console.log(afterPayment()); //решта після 500
 console.log(petsMeanPrice()); // середня ціна
 console.log(randomSale); //випадкова знижка
 console.log(clientRandomPrice()); //сума до оплати зі знижкою
 console.log(clearEarn()); //чистий прибуток
-// console.log(earn()); //чистий прибуток за прикладом
-
