@@ -12,20 +12,88 @@
 <body>
     <h1>HW #Змінні та типи - Yevhen Deyneka</h1>
     <br>
-    <h4>Максимальна ціна - 123.965 грн</h4>
-    <h4>Мінімальна ціна - 15.678 грн</h4>
-    <h4>Вартість всіх товарів - 229.8775 грн</h4>
-    <h4>Сума почерзі округлених товарів в меншу сторону - 228 грн</h4>
-    <h4>Cумa товарів округленa математично до сотень - 200</h4>
-    <h4>Чи округленa сума товарів є цілим числом - false</h4>
-    <h4>Решта з 500 грн - 270.1225 грн</h4>
-    <h4>Середня ціна товарів - 76.63 грн</h4>
-    <h4>Випадкова знижка - 0.9221143916796593 </h4>
-    <h4>Сума до оплати зі знижкою - 228.96 грн</h4>
-    <h4>Чистий прибуток - 114.01663560832034 грн</h4>
+    <h4>Максимальна ціна -
+        <script>
+            let dogPrice = (15.678);
+            let catPrice = (123.965);
+            let birdPrice = (90.2345);
+            document.writeln(Math.max(dogPrice, catPrice, birdPrice));        
+        </script>
+        <br>
+        Мінімальна ціна -
+        <script>
+            document.writeln(Math.min(dogPrice, catPrice, birdPrice));        
+        </script>
+        <br>
+        Вартість всіх товарів -
+        <script>
+            let petsSumPrice = (dogPrice + catPrice + birdPrice);
+            document.writeln(petsSumPrice);
+        </script>
+        <br>
+        Сума почерзі округлених товарів в меншу сторону -
+        <script>
+            let petsCoinslessPrice = (Math.floor(dogPrice) + Math.floor(catPrice) + Math.floor(birdPrice));
+            document.writeln(petsCoinslessPrice);
+        </script>
+        <br>
+        Cумa товарів округленa математично до сотень -
+        <script>
+            document.writeln(Math.round(petsSumPrice / 100) * 100);
+        </script>
+        <br>
+        Чи округленa сума товарів є цілим числом -
+        <script>
+            function even_or_odd(petsSumPrice) {
+                return Math.floor(petsSumPrice) % 2 === 0 ? true : false
+            }
+            document.writeln(even_or_odd());
+        </script>
+        <br>
+        Решта з 500 грн -
+        <script>
+            let payment = 500;
+            function afterPayment() {
+                return (petsSumPrice - payment) * -1
+            }
+            document.writeln(afterPayment());
+        </script>
+        <br>
+        Середня ціна товарів -
+        <script>
+            let petsQuantity = 3;
+            function petsMeanPrice() {
+                return +(petsSumPrice / petsQuantity).toFixed(2)
+            }
+            document.writeln(petsMeanPrice());
+        </script>
+        <br>
+        Випадкова знижка -
+        <script>
+            let randomSale = Math.random(0, 9);
+            document.writeln(randomSale);
+        </script>
+        <br>
+        Сума до оплати зі знижкою -
+        <script>
+            function clientRandomPrice() {
+                return +(petsSumPrice - randomSale).toFixed(2)
+            }
+            document.writeln(clientRandomPrice());
+        </script>
+        <br>
+        Чистий прибуток -
+        <script>
+            function clearEarn() {
+                let clientPrice = (petsSumPrice - randomSale)
+                let SumPrice = petsSumPrice / 2
+                return (clientPrice - SumPrice)
+            }
+            document.writeln(clearEarn());
+        </script>
     </h4>
 
-    <script src="scripts/index.js"></script>
+    <!-- <script src="scripts/index.js"></script> -->
 </body>
 
 </html>
