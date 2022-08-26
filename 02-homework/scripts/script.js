@@ -16,10 +16,10 @@ function getNumberFromUser(numberName) {
     return number;
 }
 
-const number_n = getNumberFromUser("N");
-const number_m = getNumberFromUser("M");
+let number_n = getNumberFromUser("N");
+let number_m = getNumberFromUser("M");
 
-const skipEven = confirm("Пропустити парні числа?");
+let skipEven = confirm("Пропустити парні числа?");
 
 let sum = 0;
 
