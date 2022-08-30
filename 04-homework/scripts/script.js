@@ -15,11 +15,14 @@ function pairs(students, size = 2) {
     .map((x, i) => i % size == 1 && students.slice(i, i + size))
     .filter((x) => x);
 }
-// document.writeln(
-//   `<br /><br /><b>Пари студентів</b> - <b>${pairs(students)}</b>`
-// );
 console.log(pairs(students));
 
+let studentsPairs = [pairs(students)];
 
-let studentsThemes = pairs(students) + themes;
-console.log(studentsThemes);
+function studentsPairsThemes(studentsPairs, themes) {
+  for (let i = 0; studentsPairs.length;)
+  themes.splice(i++ * 2, 0, studentsPairs.shift());
+  return themes;
+}
+
+console.log(studentsPairsThemes(studentsPairs, themes));
