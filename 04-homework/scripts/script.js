@@ -34,8 +34,7 @@ let studentsMarks = [];
 students.pop();
 
 for (var i = 0; i < students.length; i++) {
-  studentsMarks.push(students[i]);
-  studentsMarks.push(marks[i]);
+  studentsMarks.push([students[i], marks[i]]);
 }
 console.log(studentsMarks);
 
